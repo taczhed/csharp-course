@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Globalization;
 
-class Program
+class Lab3Zad1
 {
-    static void Main(string[] args)
+    static void Zad(string[] args)
     {
         var n = int.Parse(Console.ReadLine());
         var i = 2;

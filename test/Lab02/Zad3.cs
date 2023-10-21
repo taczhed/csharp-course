@@ -1,6 +1,6 @@
 ﻿using System;
 
-class Zad3
+class Lab2Zad3
 {
     static void Zad(string[] args)
     {

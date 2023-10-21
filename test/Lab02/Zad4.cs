@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-class Zad4
+class Lab2Zad4
 {
     static void Zad(string[] args)
     {
