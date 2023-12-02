@@ -5,20 +5,50 @@ class Program
 {
     static void Main(string[] args)
     {
-        var n = int.Parse(Console.ReadLine());
-        var i = 2;
+        string wejscie = Console.ReadLine();
+        short[] dane = Array.ConvertAll<string, short>(wejscie.Split(" "), short.Parse);
+        short a = dane[0], b = dane[1], c = dane[2];
 
-        while (i < n)
+        if (dane[1] > dane[0])
         {
-            if (n % i == 0)
-            {
-                Console.WriteLine("NIE");
-                return;
-            }
-            i++;
+            a = dane[0];
+            b = dane[1];
+        }
+        else
+        {
+            a = dane[1];
+            b = dane[0];
         }
 
-        Console.WriteLine("TAK");
+        string str = "";
+        for (int i = a + 1; i < b; i++)
+        {
+            if (i % c == 0)
+            {
+                str += $"{i}";
+                str += "_";
+            }
+        }
+
+        if (a - b == 0 || str == "")
+        {
+            Console.WriteLine("empty");
+            return;
+        }
+
+        str = str.Remove(str.Length - 1);
+
+        string[] listOfShorts = str.Split("_");
+
+        if (listOfShorts.Length <= 10)
+        {
+            Console.Write(String.Join(", ", listOfShorts));
+            return;
+        }
+
+        string[] result = { listOfShorts[0].ToString(), listOfShorts[1].ToString(), listOfShorts[2].ToString(), "...", listOfShorts[listOfShorts.Length - 2].ToString(), listOfShorts[listOfShorts.Length - 1].ToString() };
+
+        Console.Write(String.Join(", ", result));
     }
 
 }
