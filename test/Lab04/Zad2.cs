@@ -1,34 +1,55 @@
 ﻿using System;
-using System.Globalization;
-
 
 class Lab04Zad2
 {
-    public static double TrianglePerimeter(int a, int b, int c, int precision = 2)
+    static int ConvertToInt(string input)
     {
-        if (a < 0 || b < 0 || b < 0 || precision < 2 || precision > 8) throw new ArgumentOutOfRangeException("wrong arguments");
-        if (a + b < c || a + c < b || b + c < a) throw new ArgumentException("object not exist");
+        if (string.IsNullOrWhiteSpace(input)) throw new ArgumentException();
+        if (input.Length > 10) throw new OverflowException();
+        if (!int.TryParse(input, out int result)) throw new FormatException();
+        return result;
+    }
 
-        return a + b + c;
+    static int MultiplyNumbers(int num1, int num2, int num3)
+    {
+        checked
+        {
+            return num1 * num2 * num3;
+        }
     }
 
 
     static void Zad(string[] args)
     {
-        Console.Write("a:");
-        var a = int.Parse(Console.ReadLine());
+        try
+        {
+            string input1 = Console.ReadLine();
+            int number1 = ConvertToInt(input1);
 
-        Console.Write("b:");
-        var b = int.Parse(Console.ReadLine());
+            string input2 = Console.ReadLine();
+            int number2 = ConvertToInt(input2);
 
-        Console.Write("c:");
-        var c = int.Parse(Console.ReadLine());
+            string input3 = Console.ReadLine();
+            int number3 = ConvertToInt(input3);
 
-        Console.Write("precision:");
-        var precision = int.Parse(Console.ReadLine());
-
-
-        Console.WriteLine(TrianglePerimeter(a, b, c, precision));
+            int result = MultiplyNumbers(number1, number2, number3);
+            Console.WriteLine($"{result}");
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("format exception, exit");
+        }
+        catch (ArgumentException)
+        {
+            Console.WriteLine("argument exception, exit");
+        }
+        catch (OverflowException)
+        {
+            Console.WriteLine("overflow exception, exit");
+        }
+        catch (Exception)
+        {
+            Console.WriteLine("non supported exception, exit");
+        }
     }
-
 }
