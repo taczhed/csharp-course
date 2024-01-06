@@ -126,3 +126,4 @@ class Lab05Bonus1
             Console.Write('\n');
         }
     }
+}
