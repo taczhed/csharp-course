@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace test.Lab06.Classes
+namespace test.Basics.Lab06.Classes
 {
     public class Person
     {

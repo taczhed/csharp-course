@@ -1,6 +1,7 @@
 ﻿using System;
+using test.Basics.Lab09.Interfaces;
 
-namespace test.Lab09
+namespace test.Basics.Lab09.Classes
 {
     public class Account : IAccount
     {
@@ -14,7 +15,7 @@ namespace test.Lab09
 
         public Account(string name, decimal initialBalance = 0)
         {
-            if (string.IsNullOrWhiteSpace(name)) 
+            if (string.IsNullOrWhiteSpace(name))
                 throw new ArgumentOutOfRangeException();
 
             if (name.Trim().Length < 3)

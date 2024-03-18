@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace test.Lab09
+namespace test.Basics.Lab09.Interfaces
 {
     public interface IAccountWithLimit : IAccount
     {

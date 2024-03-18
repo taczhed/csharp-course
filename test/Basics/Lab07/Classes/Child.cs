@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace test.Lab07.Classes
+namespace test.Basics.Lab07.Classes
 {
     public class Child : Person
     {
@@ -22,8 +22,8 @@ namespace test.Lab07.Classes
 
         public override string ToString()
         {
-            string motherInfo = (mother_ref != null) ? $"mother: {mother_ref}" : "mother: No data";
-            string fatherInfo = (father_ref != null) ? $"father: {father_ref}" : "father: No data";
+            string motherInfo = mother_ref != null ? $"mother: {mother_ref}" : "mother: No data";
+            string fatherInfo = father_ref != null ? $"father: {father_ref}" : "father: No data";
 
             return $"{FirstName} {FamilyName} ({Age})\n{motherInfo}\n{fatherInfo}";
         }

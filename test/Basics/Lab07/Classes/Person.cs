@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace test.Lab07.Classes
+namespace test.Basics.Lab07.Classes
 {
     public class Person
     {
@@ -28,7 +28,7 @@ namespace test.Lab07.Classes
         {
             get => firstName;
             private set => firstName = FormatName(value);
-            
+
         }
 
         public string FamilyName

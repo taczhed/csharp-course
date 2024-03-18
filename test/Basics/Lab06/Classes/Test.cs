@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace test.Lab06.Classes
+namespace test.Basics.Lab06.Classes
 {
     class Test
     {
@@ -27,16 +27,17 @@ namespace test.Lab06.Classes
         public int Foot
         {
             get { return foot; }
-            set { 
+            set
+            {
                 if (value > 0)
                 {
                     foot = value;
-                } 
+                }
             }
         }
 
 
-        public void WrtieAge ()
+        public void WrtieAge()
         {
             Console.WriteLine(age);
         }

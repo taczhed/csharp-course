@@ -1,6 +1,7 @@
 ﻿using System;
+using test.Basics.Lab09.Interfaces;
 
-namespace test.Lab09
+namespace test.Basics.Lab09.Classes
 {
     public class Stos<T> : IStos<T>
     {

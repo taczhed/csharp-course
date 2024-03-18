@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace test.Lab06.Classes
+namespace test.Basics.Lab06.Classes
 {
     public class Czas24h
     {
@@ -15,7 +15,7 @@ namespace test.Lab06.Classes
             Check(sekunda, "sekunda");
             Check(minuta, "minuta");
             Check(godzina, "godzina");
-            
+
             Sekunda = sekunda;
             Minuta = minuta;
             Godzina = godzina;
@@ -36,7 +36,7 @@ namespace test.Lab06.Classes
 
         public int Minuta
         {
-            get => (liczbaSekund / 60) % 60;
+            get => liczbaSekund / 60 % 60;
             set
             {
                 Check(value, "minuta");
