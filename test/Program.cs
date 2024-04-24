@@ -1,48 +1,40 @@
 ﻿using test.Object.Lab01;
 using System;
- 
+using test.Object.Lab02;
+
 // 4.7.2 .net
- 
- 
-namespace lab1
 
+namespace lab2
 {
-
     internal class Program
-
     {
-
         static void Main(string[] args)
-
         {
+            var magazine = new Magazine { 
+                title = "Czasopimo - Pediatria 2024", 
+                authors = new string[] { "prof. Tomasz Nowak", "dr. Anna Annowska" }, 
+                pages = 34, 
+                pageFormat = "A5", 
+                isForAdult = false, 
+                price = 120, 
+                issn = "202-202" 
+            };
 
-            var n1 = new Fraction(2, 4);
-            var n2 = new Fraction(2, 5);
-            var add = n1 + n2;
-            var minus = n1 - n2;
-            var multiply = n1 * n2;
-            var divide = n1 / n2;
+            var guide = new Guide { 
+                title = "Pediatria - Podręcznik", 
+                authors = new string[] { "prof. Tomasz Nowak" }, 
+                pages = 235, pageFormat = "A4", 
+                isForAdult = true, 
+                price = 560, 
+                isbn = "NSD-3556", 
+                langs = new string[] { "PL", "EN" } 
+            };
 
-            Console.WriteLine(add);
-            Console.WriteLine(minus);
-            Console.WriteLine(multiply);
-            Console.WriteLine(divide);
+            magazine.ShowBasicInforamtions();
+            guide.ShowBasicInforamtions();
 
-            var n3 = new Fraction(1, 2);
-            var equal = n1 == n3;
-            var notEqual = n1 != n3;
-            var equals = Equals(n1, n3);
-            var comapre = n1.CompareTo(n3);
-            var inverse = n1.Inverse();
-
-            Console.WriteLine(equal);
-            Console.WriteLine(notEqual);
-            Console.WriteLine(equals);
-            Console.WriteLine(comapre);
-            Console.WriteLine(inverse);
-
+            Thread.Sleep(10000);
         }
-
     }
 
 }

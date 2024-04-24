@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="test.Object.Lab02.Book">
+    <Position X="6" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAQCAABAAAAgEAAAAAAAAAAAAAQAAAAAAEAAA=</HashCode>
+      <FileName>Object\Lab02\Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="test.Object.Lab02.Magazine">
+    <Position X="7.5" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAABABAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Object\Lab02\Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="test.Object.Lab02.Guide">
+    <Position X="4.75" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAABAAAAAAAAAACgAAAAAAAEAAA=</HashCode>
+      <FileName>Object\Lab02\Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
